@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
-
+import { useNavigate } from 'react-router-dom'
 function Contact() {
+    const navigate = useNavigate()
     const [name,setName]=useState("")
     const [email,setEmail]=useState("")
     const [message,setMessage]=useState("")
@@ -10,6 +11,7 @@ function Contact() {
         console.log("Name:", name)
         console.log("Email", email)
         console.log("Message", message)
+        navigate('/thank-you') // Navigate to thank you page after form submission
     }
   return (
     <div>
